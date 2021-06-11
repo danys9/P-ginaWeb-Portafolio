@@ -1,0 +1,112 @@
+.bg-primary {
+  background-color: #0e9ef1;
+}
+
+/* Sobreescribir una función, la anterior, de la hoja css, al no tener !important,
+  podemos cambiar sus elementos, si tuviera el important, ignoraría este cambio que hicimos */
+
+/* .bg-about {
+    background-color: #52d1f8;
+  } */
+
+/* Definimos una nueva clase con el color que quiero */
+
+/* Se define una clase genérica para que cuando encuentre cierta cantidad de sections
+  haga algo, como pintarlas de cierto color. "Compórtate de esta forma cuando encuentres 
+  un selector, cada 2, 3 ó 4 elementos" es como si fuera una función recibiendo un parámetro */
+
+section:nth-child(2n) {
+  background-color: #0e9ef1;
+}
+
+/* Esta de arriba es una clase genérica */
+
+/* Anteriormente decía: nth-child(2n+1) */
+
+section {
+  background-color: #52d1f8;
+}
+
+/* Clase genérica sobreescrita */
+
+.bg-color {
+  background-color: #0e9ef1;
+}
+
+/* Sobreescribir color de las líneas que dividen las secciones pares */
+
+.divider-custom.divider-light:nth-child(2n + 1) .divider-custom-line:nth-child(2n + 1) {
+  color: rgb(0, 0, 0);
+}
+
+/* Color del corazón que divide la primer Sección */
+
+.divider-custom.divider-light:nth-child(2n + 1) .divider-custom-icon:nth-child(2n + 1) {
+  color: rgb(72, 5, 197);
+}
+
+/* Se sobreescribió el uppercase para que en lugar de mayúsculas, apareciera con la primer
+  letra de cada palabra mayúscula solamente */
+
+.text-uppercase {
+  text-transform: capitalize;
+}
+
+.text-carousel {
+  font-family: 'sans-serif';
+}
+
+.text-carousels1 {
+  font-family: 'sans-serif';
+  color: black;
+}
+
+.esquinas-estilo {
+  border-radius: 20px 10px 50px 30px;
+  -webkit-border-radius: 20px 10px 50px 30px;
+  -moz-border-radius: 20px 10px 50px 30px;
+  border: 10px double;
+}
+
+.esquinas-redondas {
+  border-radius: 80px;
+  border: 10px groove;
+}
+
+.masterhead-heading {
+  font-size: 2.75rem;
+  line-height: 2.75rem;
+}
+
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #868e96;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #9831ff;
+  --bs-secondary: #2C3E50;
+  --bs-success: #198754;
+  --bs-info: #2abfff;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-font-sans-serif: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+.font-monospace {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-family: var(--bs-font-monospace) !important;
+}
+
